@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.doubleclick.chatting.UserProfileActivity"
+    android:background="#121111">
+
+
+    <ImageView
+        android:id="@+id/UserProfileImage"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:scaleX="1.4"
+        android:scaleY="1.15"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/UserProfileStar"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/UserProfileImage"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-12dp"
+        android:src="@drawable/star"
+        android:visibility="gone"/>
+
+    <include layout="@layout/app_bar_layout4"
+        android:id="@+id/UserProfile_ToolBar"/>
+
+
+    <ImageView
+        android:id="@+id/UserProfileFriendsIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/UserProfileImage"
+        android:layout_marginTop="43dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/friends"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/UserProfileTotalFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserProfileImage"
+        android:layout_toRightOf="@id/UserProfileFriendsIcon"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:textColor="#FFF"
+        android:textSize="18dp"/>
+
+
+    <TextView
+        android:id="@+id/UserProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:layout_below="@id/UserProfileTotalFriend"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+
+    <TextView
+        android:id="@+id/UserProfileStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/UserProfileName"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="18dp"/>
+
+
+
+    <Button
+        android:id="@+id/UserProfileSendRequestBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button5"
+        android:text="send friend request"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:layout_marginBottom="55dp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/UserProfileCancelRequestBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button5"
+        android:text="Cancel friend request"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:layout_marginBottom="55dp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/UserProfileUnFriendRequestBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button3"
+        android:text="UnFriend this person"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:layout_marginBottom="55dp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/UserProfileConfirmRequestBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button4"
+        android:text="Confirm friend request"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:layout_marginBottom="105dp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/UserProfileRejectRequestBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button3"
+        android:text="Reject friend request"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

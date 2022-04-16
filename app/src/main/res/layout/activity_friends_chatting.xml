@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.doubleclick.chatting.FriendsChattingActivity">
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/FriendsChatting_TooBar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/FriendsChatting_TooBar"
+        android:background="@drawable/back"/>
+
+    <ListView
+        android:id="@+id/Chatting_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/FriendsChatting_TooBar"
+        android:paddingBottom="60dp" />
+
+    <LinearLayout
+        android:id="@+id/SendContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/SendImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageButton
+            android:id="@+id/AddRecordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/record"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp"/>
+
+        <EditText
+            android:id="@+id/messageEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxHeight="135dp"
+            android:minHeight="45dp"
+            android:background="@drawable/button4"
+            android:hint="Type a message"
+            android:layout_marginLeft="2dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="2dp"/>
+
+        <ImageButton
+            android:id="@+id/sendMessageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/RecordContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button4"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/CancelRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="20dp"
+            android:textColor="#F00"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Chronometer
+            android:id="@+id/RecordTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageButton
+            android:id="@+id/sendRecordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RecordContainerInList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/SendContainer"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/PlayOrPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp"/>
+
+        <SeekBar
+            android:id="@+id/SeekBar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-8dp"/>
+
+
+        <ImageView
+            android:id="@+id/closeRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
